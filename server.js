@@ -2,6 +2,9 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.get('/api/customers', (req, res) => {
   const customers = [
     {id: 1, firstName: 'John', lastName: 'Doe'},
@@ -13,8 +16,7 @@ app.get('/api/customers', (req, res) => {
 });
 
 app.post('/api/todos', (req, res) => {
-  console.log(req.todos);
-  // res.send(req.);
+  res.send(req.body.todos);
 });
 
 const port = 5000;
