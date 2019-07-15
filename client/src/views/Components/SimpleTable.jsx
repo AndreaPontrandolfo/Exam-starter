@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 import { compose } from "redux";
 
-// import { setCurrentVehicleType } from "../actions/actionCreator";
+import { setCurrentVehicleType } from "../actions/actionCreator";
 
 const columns = [
   {
@@ -88,7 +88,7 @@ class SimpleTable extends Component {
   }
 
   
-  async componentDidMount() {
+/*   async componentDidMount() {
     try {
       const res = await axios.post(`api/todos`, {todos: `yee`,});
       console.log(res.data);
@@ -96,7 +96,7 @@ class SimpleTable extends Component {
       console.log(`Errore: ${err}`);
     }
 
-}
+} */
 
 /* setVehicleTypeByRoute = async vehicle_type => {
   await this.props.setCurrentVehicleType({

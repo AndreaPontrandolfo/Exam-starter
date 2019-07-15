@@ -1,32 +1,24 @@
-/* import { batch } from "react-redux"; */
 import axios from "axios";
-import { history } from "../index";
 
 import {
   FETCH_TODOS
 } from "./types";
 
-/* export function fetchManufacturers({ vehicle_type, }) {
+ export function fetchTodos({ todos, }) {
   return async function(dispatch) {
     try {
-      const response = await axios.post(
-        `/api/catalogo/${vehicle_type}`,
-        {
-          vehicle_type,
-        }
-      );
-      await dispatch({
-        type: FETCH_MANUFACTURERS,
+      const response = await axios.post(`api/todos`, {todos,});
+      return await dispatch({
+        type: FETCH_TODOS,
         payload: response.data,
       });
-      return await history.replace(`/catalogo/${vehicle_type}`);
     } catch (err) {
       return console.log(err);
     }
   };
 }
 
-export function setCurrentManufacturer({ vehicle_type, manufacturer, }) {
+/* export function setCurrentManufacturer({ vehicle_type, manufacturer, }) {
   return async function(dispatch) {
     try {
       const response = await axios.post(`http://${host}:5000/api/modelli`, {
@@ -116,5 +108,5 @@ export function setCurrentVersion({ vehicle_type, model, version, }) {
     }
   };
 }
-
  */
+ 

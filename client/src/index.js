@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 
 import Routes from "./router";
 import store /* , { history } */ from "./store";
+import "antd/dist/antd.css";
 
 export const history = createBrowserHistory();
 

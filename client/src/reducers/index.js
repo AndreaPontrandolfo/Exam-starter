@@ -1,11 +1,9 @@
 import { combineReducers } from "redux";
 
-import allManufacturers from "./manufacturers";
-import setCurrentVehicleType from "./vehicleTypeReducer";
+import fetchTodos from "./todos";
 
 const rootReducer = combineReducers({
-  setCurrentVehicleType,
-  allManufacturers,
+  fetchTodos,
 });
 
 export default rootReducer;
